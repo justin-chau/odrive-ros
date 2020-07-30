@@ -7,6 +7,8 @@
     <arg name="publish_odom"        default="true"/>
     <arg name="publish_odom_tf"     default="false"/>
     
+    <arg name="use_preroll"         default="false"/>
+
     <arg name="output"   default="screen"/>
     <arg name="respawn"   default="false"/>
     
@@ -14,6 +16,7 @@
             output="$(arg output)" respawn="$(arg respawn)">
         <param name="wheel_track" value="0.285"/>
         <param name="tyre_circumference" value="0.341"/>
+        <param name="use_preroll" value="$(arg use_preroll)"/>
         
         <param name="connect_on_startup"   value="$(arg connect_on_startup)"/>
         <param name="calibrate_on_startup" value="$(arg calibrate_on_startup)"/>
