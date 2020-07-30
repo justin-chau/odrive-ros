@@ -91,7 +91,7 @@ class ODriveNode(object):
         self.tyre_circumference = float(get_param('~tyre_circumference', 0.341)) # used to translate velocity commands in m/s into motor rpm
         
         self.connect_on_startup   = get_param('~connect_on_startup', False)
-        #self.calibrate_on_startup = get_param('~calibrate_on_startup', False)
+        self.calibrate_on_startup = get_param('~calibrate_on_startup', False)
         #self.engage_on_startup    = get_param('~engage_on_startup', False)
         
         self.has_preroll     = get_param('~use_preroll', True)
